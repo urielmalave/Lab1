@@ -17,7 +17,13 @@ public class Geometric extends Progression {
 	
 	@Override
 	public String toString() {
-		return "Goem (3,2)";
+		return "Geom("+(int)firstValue()+","+(int)commonFactor+")";
+	}
+	
+	public double getTerm(int n) throws IndexOutOfBoundsException {
+		if (n<=0) throw new IndexOutOfBoundsException("printAllTerms: Invalid argument value = " +n);
+		
+		return firstValue()*Math.pow(commonFactor, n-1);
 	}
 
 }

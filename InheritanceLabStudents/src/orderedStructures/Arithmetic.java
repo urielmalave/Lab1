@@ -16,7 +16,12 @@ public class Arithmetic extends Progression {
 	
 	@Override
 	public String toString() {
-		return "Arith (3,2)";
+		return "Arith("+(int)firstValue()+","+(int)commonDifference+")";
+	}
+	
+	public double getTerm(int n) throws IndexOutOfBoundsException {
+		if (n <=0) throw new IndexOutOfBoundsException("printAllTerms: Invalid argument value = " +n);
+		return firstValue()+commonDifference*(n-1);
 	}
 
 }
